@@ -79,6 +79,7 @@ Foi construída uma interface gráfica em Streamlit (`app.py`) com:
 As capturas de ecrã comprovando a execução local em GPU e o funcionamento do frontend estão armazenadas na pasta `Prints/`:
 * `Prints/app_streamlit.png`: Interface Streamlit com o modelo treinado a extrair dados em GPU.
 * `Prints/nvidia_smi_vscode.png`: Terminal integrado do VS Code a executar `nvidia-smi` com processo ativo na RTX 3060.
+* `Prints/vscode_gpu_monitor.png`: Interface do VS Code com o plugin de monitoramento de GPU ativo.
 
 ---
 
