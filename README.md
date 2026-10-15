@@ -35,6 +35,17 @@ Projeto desenvolvido para a disciplina **Generative AI for Engineering** da **FI
 
 ---
 
+## 📌 Atendimento às Observações do Projeto
+
+* **Obs 1 — Plugins do VSCode para Monitoramento de GPU:**
+  * Configurado o plugin **GPU Monitor** no VS Code para acompanhar em tempo real temperatura, consumo de VRAM e percentual de uso da GPU diretamente na barra de status durante o treinamento e a inferência.
+  * Evidência registrada e documentada na pasta `Prints/`.
+* **Obs 2 — Instalação do CUDA Correto para a Placa de Vídeo:**
+  * Criado o utilitário `setup_env.py`, que identifica a GPU NVIDIA instalada e direciona a instalação do PyTorch compilado especificamente para a arquitetura do hardware.
+  * Para a **NVIDIA GeForce RTX 3060 (Ampere)** utilizada, foi configurado o **CUDA 12.4**, garantindo compatibilidade integral com os drivers do sistema e máxima performance com *Tensor Cores*.
+
+---
+
 ## 📊 Comparativo de Experiências e Hiperparâmetros
 
 O pipeline avaliou o modelo base (*zero-shot*) e comparou duas configurações de hiperparâmetros no conjunto de teste (amostras com frases e combinações não vistas no treino):
