@@ -1,0 +1,202 @@
+{
+  "modelo_base": "HuggingFaceTB/SmolLM2-135M",
+  "avaliacao_base": {
+    "avaliacao": "modelo_base",
+    "acertos_exatos": "0/50",
+    "taxa_acerto_exato": 0.0,
+    "taxa_acerto_por_campo": 0.0,
+    "tempo_segundos": 281.74,
+    "amostras": [
+      {
+        "pedido": "Preciso receber 26 pacotes de papel A4 no endereço Av Rebouças 1200 hoje à tarde.",
+        "esperado": "{\"produto\": \"pacotes de papel A4\", \"qtd\": 26, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"hoje à tarde\"}",
+        "gerado": "```json\n{\n    \"produto\": \"A4\",\n    \"qtd\": 26,\n    \"endereco\": \"Av Rebouças 1200 hoje à tarde\"\n}",
+        "campos_corretos": "0/4",
+        "passou": false,
+        "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "pedido": "Preciso receber 16 mouses sem fio no endereço Av Rebouças 1200 até sexta-feira.",
+        "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 16, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"até sexta-feira\"}",
+        "gerado": "```json\n{\n    \"produto\": \"16m\",\n    \"qtd\": 16,\n    \"endereco\": \"Av Rebouças 1200 até sexta-feira\"\n}",
+        "campos_corretos": "0/4",
+        "passou": false,
+        "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "pedido": "Preciso receber 6 mouses sem fio no endereço Rua Augusta 1500 até segunda.",
+        "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 6, \"endereco\": \"Rua Augusta 1500\", \"prazo\": \"até segunda\"}",
+        "gerado": "```json\n{\n    \"produto\": \"1000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "campos_corretos": "0/4",
+        "passou": false,
+        "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "pedido": "Preciso receber 24 garrafas térmicas no endereço Av Engenheiro Luís Carlos Berrini 500 até sexta-feira.",
+        "esperado": "{\"produto\": \"garrafas térmicas\", \"qtd\": 24, \"endereco\": \"Av Engenheiro Luís Carlos Berrini 500\", \"prazo\": \"até sexta-feira\"}",
+        "gerado": "```json\n{\n    \"produto\": \"1000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "campos_corretos": "0/4",
+        "passou": false,
+        "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "pedido": "Preciso receber 32 mouses sem fio no endereço Av Brigadeiro Faria Lima 2200 amanhã cedo.",
+        "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 32, \"endereco\": \"Av Brigadeiro Faria Lima 2200\", \"prazo\": \"amanhã cedo\"}",
+        "gerado": "```json\n{\n    \"produto\": \"1000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "campos_corretos": "0/4",
+        "passou": false,
+        "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+      }
+    ]
+  },
+  "experimentos": [
+    {
+      "experimento": "exp1_lr_1e-5_ep2",
+      "parametros": {
+        "epocas": 2,
+        "lote": 4,
+        "lr": 1e-05
+      },
+      "historico_loss": [
+        {
+          "epoca": 1,
+          "loss_treino": 0.5217,
+          "loss_validacao": 0.2569
+        },
+        {
+          "epoca": 2,
+          "loss_treino": 0.2463,
+          "loss_validacao": 0.1542
+        }
+      ],
+      "avaliacao": {
+        "avaliacao": "exp1_lr_1e-5_ep2",
+        "acertos_exatos": "0/50",
+        "taxa_acerto_exato": 0.0,
+        "taxa_acerto_por_campo": 37.0,
+        "tempo_segundos": 224.51,
+        "amostras": [
+          {
+            "pedido": "Preciso receber 26 pacotes de papel A4 no endereço Av Rebouças 1200 hoje à tarde.",
+            "esperado": "{\"produto\": \"pacotes de papel A4\", \"qtd\": 26, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"hoje à tarde\"}",
+            "gerado": "{\n  \"produto\": \"Pacotes de papel A4\",\n  \"qtd\": 26,\n  \"endereco\": \"Av Rebouças 1200\",\n  \"prazo\": \"A4\"\n}",
+            "campos_corretos": "2/4",
+            "passou": false,
+            "erro": ""
+          },
+          {
+            "pedido": "Preciso receber 16 mouses sem fio no endereço Av Rebouças 1200 até sexta-feira.",
+            "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 16, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"até sexta-feira\"}",
+            "gerado": "{\n    \"produto\": \"Preciso receber 16 mouses sem fio no endereço Av Rebouças 1200 até sexta-feira\",\n    \"qtd\": 16,\n    \"endereco\": \"Av Rebouças 1200\",\n    \"prazo\": \"sexta-feira\"\n}",
+            "campos_corretos": "2/4",
+            "passou": false,
+            "erro": ""
+          },
+          {
+            "pedido": "Preciso receber 6 mouses sem fio no endereço Rua Augusta 1500 até segunda.",
+            "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 6, \"endereco\": \"Rua Augusta 1500\", \"prazo\": \"até segunda\"}",
+            "gerado": "{\n    \"produto\": \"Preciso receber 6 mouses sem fio no endereço Rua Augusta 1500 até segunda\",\n    \"qtd\": 6,\n    \"endereco\": \"Rua Augusta 1500\",\n    \"prazo\": \"Sem fio no endereço Rua Augusta 1500\",\n}",
+            "campos_corretos": "0/4",
+            "passou": false,
+            "erro": "JSON inválido: Expecting property name enclosed in double quotes: line 6 column 1 (char 197)"
+          },
+          {
+            "pedido": "Preciso receber 24 garrafas térmicas no endereço Av Engenheiro Luís Carlos Berrini 500 até sexta-feira.",
+            "esperado": "{\"produto\": \"garrafas térmicas\", \"qtd\": 24, \"endereco\": \"Av Engenheiro Luís Carlos Berrini 500\", \"prazo\": \"até sexta-feira\"}",
+            "gerado": "{\n    \"produto\": \"preco de garrafas\",\n    \"qtd\": 24,\n    \"endereco\": \"Av Engenheiro Luís Carlos Berrini 500\",\n    \"prazo\": \"sexta-feira\"\n}",
+            "campos_corretos": "2/4",
+            "passou": false,
+            "erro": ""
+          },
+          {
+            "pedido": "Preciso receber 32 mouses sem fio no endereço Av Brigadeiro Faria Lima 2200 amanhã cedo.",
+            "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 32, \"endereco\": \"Av Brigadeiro Faria Lima 2200\", \"prazo\": \"amanhã cedo\"}",
+            "gerado": "{\n    \"produto\": \"Preciso receber 32 mouses sem fio no endereço Av Brigadeiro Faria Lima 2200 amanhã cedo\",\n    \"qtd\": 32,\n    \"endereco\": \"Av Brigadeiro Faria Lima 2200 amanhã cedo\",\n    \"prazo\": \"Faria Lima 2200",
+            "campos_corretos": "0/4",
+            "passou": false,
+            "erro": "JSON inválido: Unterminated string starting at: line 5 column 14 (char 197)"
+          }
+        ]
+      }
+    },
+    {
+      "experimento": "exp2_lr_5e-5_ep4",
+      "parametros": {
+        "epocas": 4,
+        "lote": 4,
+        "lr": 5e-05
+      },
+      "historico_loss": [
+        {
+          "epoca": 1,
+          "loss_treino": 0.0537,
+          "loss_validacao": 0.0225
+        },
+        {
+          "epoca": 2,
+          "loss_treino": 0.0012,
+          "loss_validacao": 0.0243
+        },
+        {
+          "epoca": 3,
+          "loss_treino": 0.0008,
+          "loss_validacao": 0.0246
+        },
+        {
+          "epoca": 4,
+          "loss_treino": 0.0007,
+          "loss_validacao": 0.0257
+        }
+      ],
+      "avaliacao": {
+        "avaliacao": "exp2_lr_5e-5_ep4",
+        "acertos_exatos": "35/50",
+        "taxa_acerto_exato": 70.0,
+        "taxa_acerto_por_campo": 92.0,
+        "tempo_segundos": 180.7,
+        "amostras": [
+          {
+            "pedido": "Preciso receber 26 pacotes de papel A4 no endereço Av Rebouças 1200 hoje à tarde.",
+            "esperado": "{\"produto\": \"pacotes de papel A4\", \"qtd\": 26, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"hoje à tarde\"}",
+            "gerado": "{\"produto\": \"pacotes de papel A4\", \"qtd\": 26, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"hoje à tarde\"}",
+            "campos_corretos": "4/4",
+            "passou": true,
+            "erro": ""
+          },
+          {
+            "pedido": "Preciso receber 16 mouses sem fio no endereço Av Rebouças 1200 até sexta-feira.",
+            "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 16, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"até sexta-feira\"}",
+            "gerado": "{\"produto\": \"mouses sem fio no endereço Av Rebouças 1200\", \"qtd\": 16, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"até sexta-feira\"}",
+            "campos_corretos": "3/4",
+            "passou": false,
+            "erro": ""
+          },
+          {
+            "pedido": "Preciso receber 6 mouses sem fio no endereço Rua Augusta 1500 até segunda.",
+            "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 6, \"endereco\": \"Rua Augusta 1500\", \"prazo\": \"até segunda\"}",
+            "gerado": "{\"produto\": \"mouses sem fio no endereço Rua Augusta 1500\", \"qtd\": 6, \"endereco\": \"Rua Augusta 1500\", \"prazo\": \"até segunda\"}",
+            "campos_corretos": "3/4",
+            "passou": false,
+            "erro": ""
+          },
+          {
+            "pedido": "Preciso receber 24 garrafas térmicas no endereço Av Engenheiro Luís Carlos Berrini 500 até sexta-feira.",
+            "esperado": "{\"produto\": \"garrafas térmicas\", \"qtd\": 24, \"endereco\": \"Av Engenheiro Luís Carlos Berrini 500\", \"prazo\": \"até sexta-feira\"}",
+            "gerado": "{\"produto\": \"garrafas térmicas\", \"qtd\": 24, \"endereco\": \"Av Engenheiro Luís Carlos Berrini 500\", \"prazo\": \"até sexta-feira\"}",
+            "campos_corretos": "4/4",
+            "passou": true,
+            "erro": ""
+          },
+          {
+            "pedido": "Preciso receber 32 mouses sem fio no endereço Av Brigadeiro Faria Lima 2200 amanhã cedo.",
+            "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 32, \"endereco\": \"Av Brigadeiro Faria Lima 2200\", \"prazo\": \"amanhã cedo\"}",
+            "gerado": "{\"produto\": \"mouses sem fio no endereço Av Brigadeiro Faria Lima 2200 amanhã cedo\", \"qtd\": 32, \"endereco\": \"Av Brigadeiro Faria Lima 2200 amanhã cedo\", \"prazo\": \"amanhã cedo\"}",
+            "campos_corretos": "2/4",
+            "passou": false,
+            "erro": ""
+          }
+        ]
+      }
+    }
+  ]
+}

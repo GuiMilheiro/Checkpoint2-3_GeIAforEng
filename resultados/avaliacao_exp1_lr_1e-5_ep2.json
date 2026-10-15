@@ -1,0 +1,49 @@
+{
+  "avaliacao": "exp1_lr_1e-5_ep2",
+  "acertos_exatos": "0/50",
+  "taxa_acerto_exato": 0.0,
+  "taxa_acerto_por_campo": 37.0,
+  "tempo_segundos": 224.51,
+  "amostras": [
+    {
+      "pedido": "Preciso receber 26 pacotes de papel A4 no endereço Av Rebouças 1200 hoje à tarde.",
+      "esperado": "{\"produto\": \"pacotes de papel A4\", \"qtd\": 26, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"hoje à tarde\"}",
+      "gerado": "{\n  \"produto\": \"Pacotes de papel A4\",\n  \"qtd\": 26,\n  \"endereco\": \"Av Rebouças 1200\",\n  \"prazo\": \"A4\"\n}",
+      "campos_corretos": "2/4",
+      "passou": false,
+      "erro": ""
+    },
+    {
+      "pedido": "Preciso receber 16 mouses sem fio no endereço Av Rebouças 1200 até sexta-feira.",
+      "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 16, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"até sexta-feira\"}",
+      "gerado": "{\n    \"produto\": \"Preciso receber 16 mouses sem fio no endereço Av Rebouças 1200 até sexta-feira\",\n    \"qtd\": 16,\n    \"endereco\": \"Av Rebouças 1200\",\n    \"prazo\": \"sexta-feira\"\n}",
+      "campos_corretos": "2/4",
+      "passou": false,
+      "erro": ""
+    },
+    {
+      "pedido": "Preciso receber 6 mouses sem fio no endereço Rua Augusta 1500 até segunda.",
+      "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 6, \"endereco\": \"Rua Augusta 1500\", \"prazo\": \"até segunda\"}",
+      "gerado": "{\n    \"produto\": \"Preciso receber 6 mouses sem fio no endereço Rua Augusta 1500 até segunda\",\n    \"qtd\": 6,\n    \"endereco\": \"Rua Augusta 1500\",\n    \"prazo\": \"Sem fio no endereço Rua Augusta 1500\",\n}",
+      "campos_corretos": "0/4",
+      "passou": false,
+      "erro": "JSON inválido: Expecting property name enclosed in double quotes: line 6 column 1 (char 197)"
+    },
+    {
+      "pedido": "Preciso receber 24 garrafas térmicas no endereço Av Engenheiro Luís Carlos Berrini 500 até sexta-feira.",
+      "esperado": "{\"produto\": \"garrafas térmicas\", \"qtd\": 24, \"endereco\": \"Av Engenheiro Luís Carlos Berrini 500\", \"prazo\": \"até sexta-feira\"}",
+      "gerado": "{\n    \"produto\": \"preco de garrafas\",\n    \"qtd\": 24,\n    \"endereco\": \"Av Engenheiro Luís Carlos Berrini 500\",\n    \"prazo\": \"sexta-feira\"\n}",
+      "campos_corretos": "2/4",
+      "passou": false,
+      "erro": ""
+    },
+    {
+      "pedido": "Preciso receber 32 mouses sem fio no endereço Av Brigadeiro Faria Lima 2200 amanhã cedo.",
+      "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 32, \"endereco\": \"Av Brigadeiro Faria Lima 2200\", \"prazo\": \"amanhã cedo\"}",
+      "gerado": "{\n    \"produto\": \"Preciso receber 32 mouses sem fio no endereço Av Brigadeiro Faria Lima 2200 amanhã cedo\",\n    \"qtd\": 32,\n    \"endereco\": \"Av Brigadeiro Faria Lima 2200 amanhã cedo\",\n    \"prazo\": \"Faria Lima 2200",
+      "campos_corretos": "0/4",
+      "passou": false,
+      "erro": "JSON inválido: Unterminated string starting at: line 5 column 14 (char 197)"
+    }
+  ]
+}

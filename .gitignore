@@ -1,0 +1,16 @@
+# Modelos e pesos pesados (nunca sobem pro GitHub)
+modelos/
+*.safetensors
+*.bin
+
+# Caches do Python
+__pycache__/
+*.pyc
+
+# Configurações locais do seu VS Code
+.vscode/
+
+# Ambientes virtuais (caso alguém crie)
+.venv/
+venv/
+env/

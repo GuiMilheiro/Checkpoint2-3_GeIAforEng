@@ -1,0 +1,49 @@
+{
+  "avaliacao": "modelo_base",
+  "acertos_exatos": "0/50",
+  "taxa_acerto_exato": 0.0,
+  "taxa_acerto_por_campo": 0.0,
+  "tempo_segundos": 281.74,
+  "amostras": [
+    {
+      "pedido": "Preciso receber 26 pacotes de papel A4 no endereço Av Rebouças 1200 hoje à tarde.",
+      "esperado": "{\"produto\": \"pacotes de papel A4\", \"qtd\": 26, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"hoje à tarde\"}",
+      "gerado": "```json\n{\n    \"produto\": \"A4\",\n    \"qtd\": 26,\n    \"endereco\": \"Av Rebouças 1200 hoje à tarde\"\n}",
+      "campos_corretos": "0/4",
+      "passou": false,
+      "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "pedido": "Preciso receber 16 mouses sem fio no endereço Av Rebouças 1200 até sexta-feira.",
+      "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 16, \"endereco\": \"Av Rebouças 1200\", \"prazo\": \"até sexta-feira\"}",
+      "gerado": "```json\n{\n    \"produto\": \"16m\",\n    \"qtd\": 16,\n    \"endereco\": \"Av Rebouças 1200 até sexta-feira\"\n}",
+      "campos_corretos": "0/4",
+      "passou": false,
+      "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "pedido": "Preciso receber 6 mouses sem fio no endereço Rua Augusta 1500 até segunda.",
+      "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 6, \"endereco\": \"Rua Augusta 1500\", \"prazo\": \"até segunda\"}",
+      "gerado": "```json\n{\n    \"produto\": \"1000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "campos_corretos": "0/4",
+      "passou": false,
+      "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "pedido": "Preciso receber 24 garrafas térmicas no endereço Av Engenheiro Luís Carlos Berrini 500 até sexta-feira.",
+      "esperado": "{\"produto\": \"garrafas térmicas\", \"qtd\": 24, \"endereco\": \"Av Engenheiro Luís Carlos Berrini 500\", \"prazo\": \"até sexta-feira\"}",
+      "gerado": "```json\n{\n    \"produto\": \"1000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "campos_corretos": "0/4",
+      "passou": false,
+      "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "pedido": "Preciso receber 32 mouses sem fio no endereço Av Brigadeiro Faria Lima 2200 amanhã cedo.",
+      "esperado": "{\"produto\": \"mouses sem fio\", \"qtd\": 32, \"endereco\": \"Av Brigadeiro Faria Lima 2200\", \"prazo\": \"amanhã cedo\"}",
+      "gerado": "```json\n{\n    \"produto\": \"1000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "campos_corretos": "0/4",
+      "passou": false,
+      "erro": "JSON inválido: Expecting value: line 1 column 1 (char 0)"
+    }
+  ]
+}
